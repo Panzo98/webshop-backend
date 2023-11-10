@@ -16,10 +16,10 @@ module.exports = (sequelize, DataTypes) => {
   }
   productVariation.init(
     {
-      productId: { type: DataTypes.INTEGER},
+      productId: { type: DataTypes.INTEGER, allowNull: false },
       size: { type: DataTypes.STRING },
       color: { type: DataTypes.STRING },
-      price: { type: DataTypes.DECIMAL },
+      price: { type: DataTypes.DECIMAL, allowNull: false },
     },
     {
       sequelize,
