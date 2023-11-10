@@ -34,7 +34,7 @@ router.put("/update-store/:id", adminVerify, async (req, res) => {
   }
 });
 
-router.post("/create-new-store", adminVerify, async (req, res) => {
+router.post("/create-new-store", async (req, res) => {
   console.log(req.body);
   try {
     let newStore = await Store.create({

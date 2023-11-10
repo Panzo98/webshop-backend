@@ -12,6 +12,7 @@ module.exports = {
       coupon: {
         type: Sequelize.STRING,
         allowNull: false,
+        unique: true,
       },
       used: {
         type: Sequelize.BOOLEAN,

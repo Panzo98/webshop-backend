@@ -7,6 +7,8 @@ const storesRoutes = require("./routes/stores");
 const ordersRouter = require("./routes/orders");
 const productsRouter = require("./routes/products");
 const addressesRouter = require("./routes/addresses");
+const newsletters = require("./routes/newsletters");
+const couponsRouter = require("./routes/coupons");
 
 const app = express();
 app.use(express.json());
@@ -19,6 +21,8 @@ app.use("/stores", storesRoutes);
 app.use("/orders", ordersRouter);
 app.use("/products", productsRouter);
 app.use("/addresses", addressesRouter);
+app.use("/newsletters", newsletters);
+app.use("/coupons", couponsRouter);
 
 const sequelize = new Sequelize(
   config.database,
