@@ -18,11 +18,11 @@ module.exports = (sequelize, DataTypes) => {
       });
       Product.hasMany(models.ProductHasImages, {
         foreignKey: "productId",
-        as: "Product",
+        as: "ProductImages",
       });
       Product.hasMany(models.productVariation, {
         foreignKey: "productId",
-        as: "Product",
+        as: "ProductVariations",
       });
     }
   }

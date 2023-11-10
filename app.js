@@ -1,6 +1,6 @@
 const express = require("express");
 const { Sequelize } = require("sequelize");
-const config = require("./config/config.json");
+const config = require("./config/config.json").development;
 const cors = require("cors");
 const usersRoutes = require("./routes/users");
 const storesRoutes = require("./routes/stores");
@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 // app.options("*", cors());
-const port = 5000;
+const port = 5123;
 
 app.use("/users", usersRoutes);
 app.use("/stores", storesRoutes);

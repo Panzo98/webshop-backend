@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
       });
       Store.hasMany(models.Newsletters, {
         foreignKey: "storeId",
-        as: "Store",
+        as: "Newsletters",
       });
     }
   }
